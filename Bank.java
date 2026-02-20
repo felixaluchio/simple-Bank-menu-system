@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Bank {
     static Scanner input = new Scanner(System.in);
   static void showBalance(double balance){
-      System.out.printf("Your account balance is: %.2f ",balance);
+      System.out.printf("Your account balance is: %.2f\n ",balance);
   }
   static double deposit(){
       System.out.print("Enter the amount you'd like to deposit: ");
@@ -12,7 +12,7 @@ public class Bank {
           System.out.println("The amount to be deposited can't be a negative");
           return 0 ;
       }else {
-          System.out.printf("You have successfully deposited: %.2f", amount);
+          System.out.printf("You have successfully deposited: %.2f\n", amount);
           return amount;
       }
   }
@@ -26,7 +26,7 @@ public class Bank {
           System.out.println("Insufficient funds");
           return 0;
       }else{
-          System.out.printf("you have successfully withdrawn: %.2f" ,amount);
+          System.out.printf("you have successfully withdrawn: %.2f\n" ,amount);
           return amount;
       }
   }
@@ -55,8 +55,11 @@ public class Bank {
                 case 3 ->balance-=withdraw(balance);
                 case 4 ->isRunning = false;
                 default -> System.out.println("Invalid choice");
+             
             }
         }
 
     }
+    
+
 }
